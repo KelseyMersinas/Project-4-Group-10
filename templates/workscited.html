@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/sandstone/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Mushroom Classification</title>
+</head>
+<body>
+    <div id="chart"></div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Home</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('predict') }}">Identify</a>
+                    </li>
+                    <li class="nav-item"></li>
+                        <a class="nav-link" href="{{ url_for('aboutus') }}">About Us</a>
+                    </li>
+                    <li class="nav-item"></li>
+                    <a class="nav-link" href="{{ url_for('workscited') }}">Works Cited</a>
+                    </li>
+                    <li class="nav-item"></li>
+                    <a class="nav-link" href="{{ url_for('writeup') }}">Write Up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Works Cited content -->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card" style="margin: 10px;">
+                <div class="card-header text-center">
+                    <h1>Works Cited</h1>
+                </div>
+
+                <div class="card-body text-center">
+
+                    <p>
+                        CHANGE ALL OF THIS INFO (2024, June 21).<i>On a Typical Day in Fiscal Year 2022, CBP... </i><br> U.S. Customs and Border Protection. Retrieved August 1, 2024, from
+                        <a href="https://www.cbp.gov/newsroom/stats/typical-day-fy2022">https://www.cbp.gov/newsroom/stats/typical-day-fy2022</a>
+                    </p>
+                    <hr>
+                    <p>
+                        CHANGE ALL OF THIS INFO</i><br>Bureau of Transportation Statistics. Retrieved August 10, 2024, from
+                        <a href="https://data.bts.gov/Research-and-Statistics/Border-Crossing-Entry-Data/keg4-3bc2/data">https://data.bts.gov/Research-and-Statistics/Border-Crossing-Entry-Data/keg4-3bc2/data</a>
+                    </p>
+                    <hr>
+                    <p>
+                        CHANGE ALL OF THIS INFO <i>Border Crossing/Entry Data.</i><br>Bureau of Transportation Statistics. Retrieved August 10, 2024, from
+                        <a href="https://www.bts.gov/explore-topics-and-geography/geography/border-crossingentry-data#1">https://www.bts.gov/explore-topics-and-geography/geography/border-crossingentry-data#1</a>
+                    </p>
+                    <hr>
+                    <p>
+                        CHANGE ALL OF THIS INFO (2023, August 23). <i>Transborder Data Mid-Year Report 2023.</i><br>Bureau of Transportation Statistics. Retrieved August 1, 2024, from
+                        <a href="https://www.bts.gov/data-spotlight/transborder-data-mid-year-report-2023#:~:text=U.S.%20land%20borders%20with%20Canada,trade%20partners%20of%20agricultural%20goods">https://www.bts.gov/data-spotlight/transborder-data-mid-year-report-2023#:~:text=U.S.%20land%20borders%20with%20Canada,trade%20partners%20of%20agricultural%20goods</a>
+                    </p>
+                    <hr>
+                    <p>
+                        CHANGE ALL OF THIS INFO<i>San Diego Is Once Again a Top Migrant Entry Point.</i> The New York Times.<br>
+                        <a href="https://www.nytimes.com/2024/06/04/us/san-diego-migrants-california.html">https://www.nytimes.com/2024/06/04/us/san-diego-migrants-california.html</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
