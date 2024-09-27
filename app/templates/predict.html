@@ -8,7 +8,6 @@
     <title>Mushroom Predictions</title>
 </head>
 <body>
-    <div id="chart"></div>
     <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top" data-bs-theme="dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="/">Home</a>
@@ -39,10 +38,22 @@
         <p>Use our model to predict the edibility of mushrooms!</p>
     </header>
     <main class="container">
-        <form id="prediction-form" onsubmit="submitForm(event)">
+        <form id="prediction-form" action="/predict" method="post">
             <div class="form-group">
-                <label for="features">Enter mushroom features (comma-separated):</label>
-                <input type="text" class="form-control" id="features" name="features" placeholder="e.g., brown, convex, free" required>
+                <label for="color">Select Mushroom Color:</label>
+                <select class="form-control" id="color" name="color" required>
+                    {% for color in valid_features['color'] %}
+                        <option value="{{ color }}">{{ color }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="cap_shape">Select Cap Shape:</label>
+                <select class="form-control" id="cap_shape" name="cap_shape" required>
+                    {% for shape in valid_features['cap_shape'] %}
+                        <option value="{{ shape }}">{{ shape }}</option>
+                    {% endfor %}
+                </select>
             </div>
             <button type="submit" class="btn btn-primary">Predict Edibility</button>
         </form>
