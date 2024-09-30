@@ -1,114 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/sandstone/bootstrap.min.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/sandstone/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
     <script
-			  src="https://code.jquery.com/jquery-3.7.1.js"
-			  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-			  crossorigin="anonymous"></script>
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
     <title>Mushroom Predictions</title>
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top" data-bs-theme="dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/">Home</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('predict') }}">Identify</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('aboutus') }}">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('workscited') }}">Works Cited</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('writeup') }}">Write Up</a>
-                    </li>
-                </ul>
-            </div>
+  </head>
+  <body>
+    <div id="chart"></div>
+    <nav
+      class="navbar navbar-expand-lg bg-body-tertiary sticky-top"
+      data-bs-theme="dark"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">
+          <img
+            src="{{ url_for('static', filename='images/mushroom_icon.png') }}"
+            alt="Mushroom Icon"
+            style="height: 40px; width: 40px"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('predict') }}">Identify</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('tableauOne') }}"
+                >Tableau Dashboard 1</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('tableauTwo') }}"
+                >Tableau Dashboard 2</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('aboutus') }}">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('workscited') }}"
+                >Works Cited</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('writeup') }}">Write Up</a>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
     <header>
-        <h1>Welcome to the Mushroom Classification App</h1>
-        <p>Use our model to predict the edibility of mushrooms!</p>
+      <h1>Welcome to the Mushroom Classification App</h1>
+      <p>Use our model to predict the edibility of mushrooms!</p>
     </header>
     <main class="container">
-        <form id="prediction-form">
-            <div class="form-group">
-                <label for="color">Select Mushroom Color:</label>
-                <select class="form-control" id="color" name="color" required>
-                    {% for color in valid_features['gill_color'] %}
-                        <option value="{{ color }}">{{ color }}</option>
-                    {% endfor %}
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="cap_shape">Select Cap Shape:</label>
-                <select class="form-control" id="cap_shape" name="cap_shape" required>
-                    {% for shape in valid_features['cap_shape'] %}
-                        <option value="{{ shape }}">{{ shape }}</option>
-                    {% endfor %}
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="gill_attachment">Select Gill Attachment:</label>
-                <select class="form-control" id="gill_attachment" name="gill_attachment" required>
-                    {% for attachment in valid_features['gill_attachment'] %}
-                        <option value="{{ attachment }}">{{ attachment }}</option>
-                    {% endfor %}
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="gill_color">Select Gill Color:</label>
-                <select class="form-control" id="gill_color" name="gill_color" required>
-                    {% for color in valid_features['gill_color'] %}
-                        <option value="{{ color }}">{{ color }}</option>
-                    {% endfor %}
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="season">Select Season:</label>
-                <select class="form-control" id="season" name="season" required>
-                    {% for season in valid_features['season'] %}
-                        <option value="{{ season }}">{{ season }}</option>
-                    {% endfor %}
-                </select>
-            </div>
-            <div class="form-group"></div>
-                <label for="stem_color">Select Stem Color:</label>
-                <select class="form-control" id="stem_color" name="stem_color" required>
-                    {% for stem_color in valid_features['stem_color'] %}
-                        <option value="{{ stem_color }}">{{ stem_color }}</option>
-                    {% endfor %}
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="cap_diameter">Cap Diameter (mm):</label>
-                <input type="range" id="cap_diameter" name="cap_diameter" min="{{ valid_features['cap_diameter']['min'] }}" max="{{ valid_features['cap_diameter']['max'] }}" step="1" value="100">
-                <span id="cap_diameter_value">10</span> mm
-            </div>
-            <div class="form-group">
-                <label for="stem_height">Stem Height (cm):</label>
-                <input type="range" id="stem_height" name="stem_height" min="{{ valid_features['stem_height']['min'] }}" max="{{ valid_features['stem_height']['max'] }}" step="0.000001" value="1.5">
-                <span id="stem_height_value">1.5</span> cm
-            </div>
-            <div class="form-group">
-                <label for="stem_width">Stem Width (mm):</label>
-                <input type="range" id="stem_width" name="stem_width" min="{{ valid_features['stem_width']['min'] }}" max="{{ valid_features['stem_width']['max'] }}" step="1" value="100">
-                <span id="stem_width_value">100</span> mm
-            </div>
-            <button id="submit" type="submit" class="btn btn-primary">Predict Edibility</button>
-        </form>
-        <div id="result" style="margin-top: 20px;"></div>
+      <form id="prediction-form">
+        <div class="form-group">
+          <label for="color">Select Mushroom Color:</label>
+          <select class="form-control" id="color" name="color" required>
+            {% for color in valid_features['gill_color'] %}
+            <option value="{{ color }}">{{ color }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="cap_shape">Select Cap Shape:</label>
+          <select class="form-control" id="cap_shape" name="cap_shape" required>
+            {% for shape in valid_features['cap_shape'] %}
+            <option value="{{ shape }}">{{ shape }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="gill_attachment">Select Gill Attachment:</label>
+          <select
+            class="form-control"
+            id="gill_attachment"
+            name="gill_attachment"
+            required
+          >
+            {% for attachment in valid_features['gill_attachment'] %}
+            <option value="{{ attachment }}">{{ attachment }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="gill_color">Select Gill Color:</label>
+          <select
+            class="form-control"
+            id="gill_color"
+            name="gill_color"
+            required
+          >
+            {% for color in valid_features['gill_color'] %}
+            <option value="{{ color }}">{{ color }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="season">Select Season:</label>
+          <select class="form-control" id="season" name="season" required>
+            {% for season in valid_features['season'] %}
+            <option value="{{ season }}">{{ season }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="stem_color">Select Stem Color:</label>
+          <select
+            class="form-control"
+            id="stem_color"
+            name="stem_color"
+            required
+          >
+            {% for stem_color in valid_features['stem_color'] %}
+            <option value="{{ stem_color }}">{{ stem_color }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="cap_diameter">Cap Diameter (mm):</label>
+          <input
+            type="range"
+            id="cap_diameter"
+            name="cap_diameter"
+            min="{{ valid_features['cap_diameter']['min'] }}"
+            max="{{ valid_features['cap_diameter']['max'] }}"
+            step="1"
+            value="100"
+          />
+          <span id="cap_diameter_value">10</span> mm
+        </div>
+        <div class="form-group">
+          <label for="stem_height">Stem Height (cm):</label>
+          <input
+            type="range"
+            id="stem_height"
+            name="stem_height"
+            min="{{ valid_features['stem_height']['min'] }}"
+            max="{{ valid_features['stem_height']['max'] }}"
+            step="0.000001"
+            value="1.5"
+          />
+          <span id="stem_height_value">1.5</span> cm
+        </div>
+        <div class="form-group">
+          <label for="stem_width">Stem Width (mm):</label>
+          <input
+            type="range"
+            id="stem_width"
+            name="stem_width"
+            min="{{ valid_features['stem_width']['min'] }}"
+            max="{{ valid_features['stem_width']['max'] }}"
+            step="1"
+            value="100"
+          />
+          <span id="stem_width_value">100</span> mm
+        </div>
+        <button id="submit" type="submit" class="btn btn-primary">
+          Predict Edibility
+        </button>
+      </form>
+      <div id="result" style="margin-top: 20px"></div>
     </main>
     <script src="{{ url_for('static', filename='js/logic.js') }}"></script>
-</body>
+  </body>
+</html>
