@@ -9,6 +9,7 @@ $(document).ready(function () {
   });
 });
 
+// change slider values to see selection
 $("#cap_diameter").change(function handleCapSliderChange(event) {
   const { target } = event; // event = { target: foo }
   const { value } = target; // target = { value: bar }
@@ -16,6 +17,21 @@ $("#cap_diameter").change(function handleCapSliderChange(event) {
   $labelSpan.text(value);
 });
 
+$("#stem_height").change(function handleStemHeightChange(event) {
+  const { target } = event; 
+  const { value } = target; 
+  const $labelSpan = $("#stem_height_value");
+  $labelSpan.text(value);
+});
+
+$("#stem_width").change(function handleStemWidthChange(event) {
+  const { target } = event; 
+  const { value } = target; 
+  const $labelSpan = $("#stem_width_value");
+  $labelSpan.text(value);
+});
+
+// set function for taking values from form
 function makePredictions() {
   // get the options for the form
   const cap_shape = $("#cap_shape").val();
@@ -42,7 +58,8 @@ function makePredictions() {
   };
 
   console.log(payload);
-
+  
+  // fetch request
   fetch("/makePredictions", {
     body: JSON.stringify({ data: payload }),
     headers: {
