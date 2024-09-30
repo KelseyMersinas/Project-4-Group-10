@@ -9,6 +9,13 @@ $(document).ready(function () {
   });
 });
 
+$("#cap_diameter").change(function handleCapSliderChange(event) {
+  const { target } = event; // event = { target: foo }
+  const { value } = target; // target = { value: bar }
+  const $labelSpan = $("#cap_diameter_value");
+  $labelSpan.text(value);
+});
+
 function makePredictions() {
   // get the options for the form
   const cap_shape = $("#cap_shape").val();
@@ -48,10 +55,12 @@ function makePredictions() {
       console.log(data);
       if (data.ok) {
         // Display the predictions in the result div
-        document.getElementById("result").innerText = `Prediction: ${data.predictions[0]}`;
-       } else {
+        document.getElementById(
+          "result"
+        ).innerText = `Prediction: ${data.predictions[0]}`;
+      } else {
         document.getElementById("result").innerText = `Error: ${data.error}`;
-       }
+      }
     })
     .catch((error) => {
       console.error(error);
