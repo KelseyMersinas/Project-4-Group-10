@@ -6,6 +6,7 @@ from helper import convert_to_index
 
 app = Flask(__name__)
 
+
 # enter in the valid features for the search form
 valid_features = {
     'cap_shape': ['Bell', 'Conical', 'Convex', 'Flat', 'Sunken', 'Spherical'],
@@ -24,15 +25,6 @@ valid_features = {
 with open('mushroom_model.pkl', 'rb') as file:
     model = pickle.load(file)
 
-# @app.route('/makePredictions', methods=['POST'])
-# def make_predictions():
-    # content = request.json["data"]
-    # print('content', content)
-    # df = pd.DataFrame.from_dict(content)
-    # print('df', df)
-    # predictions = model.predict(df)
-    # print('predictions', predictions)
-    # return(jsonify({"ok": True}))
 
 @app.route('/makePredictions', methods=['POST'])
 def make_predictions():

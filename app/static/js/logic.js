@@ -36,21 +36,6 @@ function makePredictions() {
 
   console.log(payload);
 
-  // Perform a POST request to the query URL
-  // $.ajax({
-  //     url: "/makePredictions",
-  //     type: "POST",
-  //     contentType: 'application/json;charset=UTF-8',
-  //     data: JSON.stringify({ "data": payload }),
-  //     success: function(returnedData) {
-  //         console.log(returnedData);
-  //     },
-  //     error: function(XMLHttpRequest, textStatus, errorThrown) {
-  //         alert("Status: " + textStatus);
-  //         alert("Error: " + errorThrown);
-  //     }
-  // });
-  // make fatch request to return the results as json
   fetch("/makePredictions", {
     body: JSON.stringify({ data: payload }),
     headers: {

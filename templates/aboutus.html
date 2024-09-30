@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/sandstone/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Mushroom Classification</title>
+</head>
+<body>
+    <div id="chart"></div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Home</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('predict') }}">Identify</a>
+                    </li>
+                    <li class="nav-item"></li>
+                        <a class="nav-link" href="{{ url_for('aboutus') }}">About Us</a>
+                    </li>
+                    <li class="nav-item"></li>
+                    <a class="nav-link" href="{{ url_for('workscited') }}">Works Cited</a>
+                    </li>
+                    <li class="nav-item"></li>
+                    <a class="nav-link" href="{{ url_for('writeup') }}">Write Up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header>
+
+    </header>
+<!-- JS for About Us -->
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card bg-secondary border-dark" style="padding: 10px; margin: 10px;">
+                    <div class="card-header bg-secondary">
+                        <h2 style="text-align: left;">
+                            About Us
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card bg-secondary border-dark" style="padding: 10px; margin: 10px;">
+                    <div class="card-header">
+                        <h4 style="text-align: left;">Kelsey Mersinas</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-1">
+                                <img src="static/images/kelsey_pic.jpg" alt="Profile Picture" class="profile-pic" width="100" height="100"/>
+                            </div>
+                            <div class="col-md-11">
+                                <p>
+                                    My name is Kelsey Mersinas. I am a Inside Sales Rep currently at Leaf Home. When I am not working, I enjoy biking, hiking or hanging out with friends.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <p>Email: kelsey.mersinas@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card bg-secondary border-dark" style="padding: 10px; margin: 10px;">
+                    <div class="card-header">
+                        <h4 style="text-align: left;">Sarah Ruth</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-1">
+                                <img src="static/images/sarah_pic.jpg" alt="Profile Picture" class="profile-pic" width="100" height="100"/>
+                            </div>
+                            <div class="col-md-11">
+                                <p>
+                                    My name is Sarah Ruth, and I'm a student in the Data Analytics Bootcamp. I have been learning new technologies including Python, SQL, HTML, CSS, JavaScript, and Machine Learning.<br>
+                                    I enjoy socializing with my family/friends, swimming, traveling, and exploring different craft projects.
+                                    I have a Master's Degree in Applied Psychology, with an emphasis in Industrial/Organizational Psychology. <br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <p>Email: sarah.m.ruth.77@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card bg-secondary border-dark" style="padding: 10px; margin: 10px;">
+                    <div class="card-header">
+                        <h4 style="text-align: left;">Drew Garza</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-1">
+                                <img src="static/images/Garza_Drew.jpg" alt="Profile Picture" class="profile-pic" width="100" height="100"/>
+                            </div>
+                            <div class="col-md-11">
+                                <p>
+                                    My name is Drew Garza. I am a software integration support representative for connecting construction accounting systems with cloud applications.<br>
+                                    I am working to develop knowledge and skills to thrive in the technology industry. <br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <p>Email: drew.garza75@gmail.com
+                        <p>https://www.linkedin.com/in/andrew-garza-298105223/ </p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card bg-secondary border-dark" style="padding: 10px; margin: 10px;">
+                    <div class="card-header">
+                        <h4 style="text-align: left;">Laura Zapata</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-1">
+                                <img src="static/images/" alt="Profile Picture" class="profile-pic" width="100" height="100"/>
+                            </div>
+                            <div class="col-md-11">
+                                <p>
+                                    My name is Laura Zapata. I am a Legal Assistant in Houston, Texas, who is passionate about studying data analytics. <br>
+                                    I hope to integrate this knowledge into my legal career, with the larger goal of becoming a source of clear and accessible information. <br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <p>Email: laurazapatadiaz315@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+</html>
