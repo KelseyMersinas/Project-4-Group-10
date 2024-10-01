@@ -16,13 +16,17 @@ We aim to explore several research questions related to mushroom edibility, incl
 
 - **Characteristics of Poisonous Mushrooms**: What common features are shared among poisonous mushroom species?
 - **Seasonality and Edibility**: Does the season in which a mushroom is found affect its edibility?
-- **Impact of Color and Size**: Which of the two characteristics—color or size—plays a larger role in determining the edibility of mushrooms?
+- **Impact of Color and Size**: Which of the two characteristics—color or shape—plays a larger role in determining the edibility of mushrooms?
 
 ## Web Application
 
-Will put our Python Anywhere klink here 
+Will put our Python Anywhere link here 
 
 ## Tableau Public Dashboards
 
  Check out our Tableau Public Dashboards: [Mushroom Data Dashboard] (https://public.tableau.com/app/profile/kelsey.mersinas/viz/Mushroom_data/Dashboard1?publish=yes)
+    
+[Mushroom Edibility] (https://public.tableau.com/app/profile/andrew.garza/viz/MushroomEdibility_17273967049370/MushroomEdibilityDashboard?publish=yes)
+
+[Mushroom Edibility Visualization] (https://public.tableau.com/app/profile/laura.zapata8268/viz/MushroomEdibilityVisualization/Dashboard1)
 

@@ -99,3 +99,73 @@ body {
     padding: 10px; /* Add padding to header */
     color: #333; /* Dark text color for the header */
 }
+
+/* Predictions page styling */
+body {
+    font-family: Arial, sans-serif;
+}
+
+header h1, header p {
+    margin: 10px 0; /* Reduced margin for header */
+}
+
+.container {
+    max-width: 500px; /* Limit width of form */
+    margin: auto; /* Center the form */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Space between form groups */
+}
+
+.form-group label {
+    margin-bottom: 5px; /* Space between label and input */
+}
+
+input[type="range"] {
+    width: 33%; /* Make range inputs full width */
+}
+
+#result {
+    margin-top: 15px; /* Space between result and form */
+}
+
+/* Landing page body styling */
+.text-box {
+    border: 1px solid #ccc; /* Border around the box */
+    border-radius: 5px; /* Rounded corners */
+    padding: 20px; /* Space inside the box */
+    color: #555; /* Use a medium-dark color for text */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 20px 0; /* Space above and below the box */
+}
+
+.container {
+    display: flex; /* Use flexbox for side-by-side layout */
+    justify-content: center; /* Center the images */
+    margin-bottom: 20px; /* Space below the images */
+}
+
+.image-box {
+    height: 200px; /* Set a fixed height for each image box */
+    margin: 0 10px; /* Space between images */
+    overflow: hidden; /* Hide any overflow */
+    border-radius: 5px; /* Rounded corners for the images */
+    display: flex; /* Enable flexbox for centering */
+    align-items: center; /* Center the image vertically */
+    justify-content: center; /* Center the image horizontally */
+}
+
+.image-box img {
+    width: 100%; /* Make images fill the box */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove bottom space */
+}
+
+.text-box {
+    border: 1px solid #ccc; /* Border around the text box */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px; /* Space inside the box */
+    background-color: #f9f9f9; /* Background color */
+    text-align: center; /* Center text */
+}
