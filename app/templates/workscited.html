@@ -1,80 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/sandstone/bootstrap.min.css">
-    <link href="./static/css/style.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/sandstone/bootstrap.min.css"
+    />
+    <link href="./static/css/style.css" rel="stylesheet" />
     <title>Mushroom Classification</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="chart"></div>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top" data-bs-theme="dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/">
-                <img src="{{ url_for('static', filename='images/mushroom_icon.png') }}" alt="Mushroom Icon" style="height: 40px; width: 40px;">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('predict') }}">Identify</a>
-                    </li>
-                    <li class="nav-item"></li>
-                    <a class="nav-link" href="{{ url_for('tableauOne') }}">Tableau Dashboard 1</a>
-                    </li>
-                    <li class="nav-item"></li>
-                    <a class="nav-link" href="{{ url_for('tableauTwo') }}">Tableau Dashboard 2</a>
-                    </li>
-                    <li class="nav-item"></li>
-                    <a class="nav-link" href="{{ url_for('aboutus') }}">About Us</a>
-                    </li>
-                    <li class="nav-item"></li>
-                    <a class="nav-link" href="{{ url_for('workscited') }}">Works Cited</a>
-                    </li>
-                    <li class="nav-item"></li>
-                    <a class="nav-link" href="{{ url_for('writeup') }}">Write Up</a>
-                    </li>
-                </ul>
-            </div>
+    <nav
+      class="navbar navbar-expand-lg bg-body-tertiary sticky-top"
+      data-bs-theme="dark"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">
+          <img
+            src="{{ url_for('static', filename='images/mushroom_icon.png') }}"
+            alt="Mushroom Icon"
+            style="height: 40px; width: 40px"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('predict') }}">Identify</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('tableauOne') }}"
+                >Tableau Dashboard 1</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('tableauTwo') }}"
+                >Tableau Dashboard 2</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('aboutus') }}">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('workscited') }}"
+                >Works Cited</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('writeup') }}">Write Up</a>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
     <!-- Works Cited content -->
     <div class="row">
-        <div class="col-md-12">
-            <div class="card" style="margin: 10px;">
-                <div class="card-header text-center">
-                    <h1>Works Cited</h1>
-                </div>
+      <div class="col-md-12">
+        <div class="card" style="margin: 10px">
+          <div class="card-header text-center">
+            <h1>Works Cited</h1>
+          </div>
 
-                <div class="card-body text-center">
-
-                    <p>
-                        Wagner, D., & Hattab, G.(2021).<i>Secondary Mushroom [Dataset]</i><br> UCI Machine Learning Repository. . Retrieved September 27, 2024, from
-                        <a href="https://doi.org/10.24432/C5FP5Q">https://doi.org/10.24432/C5FP5Q</a>
-                    </p>
-                    <hr>
-                    <p>
-                        Vecteezy
-                        <a href="https://www.vecteezy.com/vector-art/14315476-a-banner-of-various-mushrooms-vector-illustration-of-fungus-drawing-of-voluminous-fungi">Banner Image Source</a>
-                    </p>
-                    <hr>
-                    <p>
-                        IconsDB.com
-                        <a href="https://www.iconsdb.com/black-icons/mushroom-icon.html">Icon Image Source</a>
-                    </p>
-                    <hr>
-                    <p>
-                        Add Cited sources - in Alphabetical order 
-                    </p>
-                    <hr>
-                    <p>
-                        Add Cited sources - in Alphabetical order
-                    </p>
-                </div>
-            </div>
+          <div class="card-body text-center">
+            <p>
+              Wagner, D., & Hattab, G.(2021).<i>Secondary Mushroom [Dataset]</i
+              ><br />
+              UCI Machine Learning Repository. . Retrieved September 27, 2024,
+              from
+              <a target="_blank" href="https://doi.org/10.24432/C5FP5Q"
+                >https://doi.org/10.24432/C5FP5Q</a
+              >
+            </p>
+            <hr />
+            <p>
+              Vecteezy
+              <a
+                target="_blank"
+                href="https://www.vecteezy.com/vector-art/14315476-a-banner-of-various-mushrooms-vector-illustration-of-fungus-drawing-of-voluminous-fungi"
+                >Banner Image Source</a
+              >
+            </p>
+            <hr />
+            <p>
+              IconsDB.com
+              <a
+                target="_blank"
+                href="https://www.iconsdb.com/black-icons/mushroom-icon.html"
+                >Icon Image Source</a
+              >
+            </p>
+            <hr />
+            <p>Add Cited sources - in Alphabetical order</p>
+            <hr />
+            <p>Add Cited sources - in Alphabetical order</p>
+          </div>
         </div>
+      </div>
     </div>
-    
+  </body>
+</html>
