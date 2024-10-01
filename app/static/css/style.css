@@ -131,23 +131,24 @@ input[type="range"] {
 }
 
 /* Landing page body styling */
-.text-box {
-    border: 1px solid #ccc; /* Border around the box */
-    border-radius: 5px; /* Rounded corners */
-    padding: 20px; /* Space inside the box */
-    color: #555; /* Use a medium-dark color for text */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    margin: 20px 0; /* Space above and below the box */
-}
-
 .container {
     display: flex; /* Use flexbox for side-by-side layout */
-    justify-content: center; /* Center the images */
+    align-items: center; /* Align items vertically */
     margin-bottom: 20px; /* Space below the images */
 }
 
+.text-box {
+    border: 1px solid #ccc; /* Border around the text box */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px; /* Space inside the box */
+    background-color: #f9f9f9; /* Background color */
+    text-align: left; /* Align text to the left */
+    margin-left: 10px; /* Space between images and text */
+}
+
 .image-box {
-    height: 200px; /* Set a fixed height for each image box */
+    height: 300px; /* Set a fixed height for each image box */
+    width: auto;
     margin: 0 10px; /* Space between images */
     overflow: hidden; /* Hide any overflow */
     border-radius: 5px; /* Rounded corners for the images */
@@ -157,19 +158,20 @@ input[type="range"] {
 }
 
 .image-box img {
-    width: 100%; /* Make images fill the box */
-    height: auto; /* Maintain aspect ratio */
+    width: auto; /* Default setting for other images */
+    height: 100%; /* Make images fill the box height */
     display: block; /* Remove bottom space */
 }
 
-.text-box {
-    border: 1px solid #ccc; /* Border around the text box */
-    border-radius: 5px; /* Rounded corners */
-    padding: 10px; /* Space inside the box */
-    background-color: #f9f9f9; /* Background color */
-    text-align: center; /* Center text */
+.image-box img.stretch {
+    width: 200%; /* Increase width for this specific image */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers the box without stretching */
 }
 
+.image-box .field {
+    overflow: visible;
+}
 
 /* Make the iframe responsive */
 .responsive-iframe {

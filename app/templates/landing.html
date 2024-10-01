@@ -1,71 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/sandstone/bootstrap.min.css">
-    <link href="./static/css/style.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/sandstone/bootstrap.min.css"
+    />
+    <link href="./static/css/style.css" rel="stylesheet" />
     <title>Mushroom Classification</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="chart"></div>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top" data-bs-theme="dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/">
-                <img src="{{ url_for('static', filename='images/mushroom_icon.png') }}" alt="Mushroom Icon" style="height: 40px; width: 40px;">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('predict') }}">Identify</a>
-                    </li>
-                    <li class="nav-item"></li>
-                    <a class="nav-link" href="{{ url_for('tableauOne') }}">Tableau Dashboard 1</a>
-                    </li>
-                    <li class="nav-item"></li>
-                    <a class="nav-link" href="{{ url_for('tableauTwo') }}">Tableau Dashboard 2</a>
-                    </li>
-                    <li class="nav-item"></li>
-                    <a class="nav-link" href="{{ url_for('aboutus') }}">About Us</a>
-                    </li>
-                    <li class="nav-item"></li>
-                    <a class="nav-link" href="{{ url_for('workscited') }}">Works Cited</a>
-                    </li>
-                    <li class="nav-item"></li>
-                    <a class="nav-link" href="{{ url_for('writeup') }}">Write Up</a>
-                    </li>
-                </ul>
-            </div>
+    <nav
+      class="navbar navbar-expand-lg bg-body-tertiary sticky-top"
+      data-bs-theme="dark"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">
+          <img
+            src="{{ url_for('static', filename='images/mushroom_icon.png') }}"
+            alt="Mushroom Icon"
+            style="height: 40px; width: 40px"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('predict') }}">Identify</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('tableauOne') }}"
+                >Tableau Dashboard 1</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('tableauTwo') }}"
+                >Tableau Dashboard 2</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('aboutus') }}">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('workscited') }}"
+                >Works Cited</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('writeup') }}">Write Up</a>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
     <div class="row"></div>
-        <div class="col-md-12">
-            <div class="card" style="margin: 10px;">
-                <div class="card-header text-left">
-                    <h1>Welcome to our Mushroom Classification App</h1>
-                </div>
-    <header>
-        <p>Explanation of the Application / Mushroom Identification Information / pretty pictures / how to use app
-            <div class="text-box">
-                <p>With over 14,000 mushroom species found around the globe, from delicious edible varieties to potentially deadly ones, knowing which mushrooms to forage is essential for safe consumption. Our Mushroom Identification App uses the power of machine learning to quickly and accurately classify mushrooms based on their unique characteristics.
-Whether you're an experienced forager or just starting out, our app provides valuable insights right in the field. With user-friendly features and a comprehensive database, you can confidently explore and build your knowledge about the fascinating world of mushrooms.
-Join us on this journey to enhance your foraging experience while prioritizing safety!</p>
-            </div>
-        </p>
-    </header>
-    <div class="container">
-        <div class="image-box">
-            <img src="https://cdn.britannica.com/14/253814-138-42B6A52C/mushroom-fungi-photosynthesize-sunlight.jpg?w=800&h=450&c=crop" alt="button mushroom">
+    <div class="col-md-12">
+      <div class="card" style="margin: 10px">
+        <div class="card-header text-left">
+          <h1>Welcome to our Mushroom Classification App</h1>
         </div>
-        <div class="image-box">
-            <img src="https://mushroomexam.com/pluginfile.php/2441/mod_page/content/1/Destroying_angels_look_Alike.jpg" alt="destroying angel">
+        <header>
+          <div class="text-box">
+            <p>
+              With over 14,000 mushroom species found around the globe, from
+              delicious edible varieties to potentially deadly ones, knowing
+              which mushrooms to forage is essential for safe consumption. Our
+              Mushroom Identification App uses the power of machine learning to
+              quickly and accurately classify mushrooms based on their unique
+              characteristics. Whether you're an experienced forager or just
+              starting out, our app provides valuable insights right in the
+              field. With user-friendly features and a comprehensive database,
+              you can confidently explore and build your knowledge about the
+              fascinating world of mushrooms. Join us on this journey to enhance
+              your foraging experience while prioritizing safety!
+            </p>
+          </div>
+        </header>
+        <div class="container">
+          <div class="image-box">
+            <img
+              src="https://cdn.britannica.com/14/253814-138-42B6A52C/mushroom-fungi-photosynthesize-sunlight.jpg?w=800&h=450&c=crop"
+              alt="button mushroom"
+            />
+          </div>
+          <div class="image-box">
+            <img
+              class="stretch"
+              src="https://mushroomexam.com/pluginfile.php/2441/mod_page/content/1/Destroying_angels_look_Alike.jpg"
+              alt="destroying angel"
+            />
+          </div>
+          <div class="text-box">
+            <p>
+              One is a harmless button mushroom, the other is the deadly
+              destroying angel.
+            </p>
+          </div>
         </div>
+        <div class="container">
+          <div class="image-box">
+            <img
+              class="field"
+              src="static/images/pic_variety.jpg"
+              alt="mushroom field"
+            />
+          </div>
+          <div class="text-box">
+            <p>
+              Mushrooms can appear very different or very similar, but
+              understanding the characteristics of mushrooms can help you
+              determine the species, even for the untrained!
+            </p>
+          </div>
+        </div>
+        <div class="container">
+          <div class="image-box">
+            <img
+              src="static/images/gills_pic.jpg"
+              alt="gills example"
+            />
+          </div>
+          <div class="text-box">
+            <p>
+              The gills are underneath the cap and release the spores. The way
+              the gills are attached can be used to determine the type of
+              mushroom. Many poisonous mushrooms differ from their harmless counterparts in how their gills appear.
+            </p>
+          </div>
+        </div>
+        <div class="container">
+          <div class="image-box">
+            <img
+              class="field"
+              src="static/images/pexels-photo-1379563.jpeg"
+              alt="mushroom cap example"
+            />
+          </div>
+          <div class="text-box">
+            <p>
+              The most prominent feature - the mushroom cap - can vary in shape
+              and features.
+            </p>
+          </div>
+        </div>
+        <div class="container">
+          <div class="image-box">
+            <img
+              src="https://learnyourland.com/wp-content/uploads/2019/09/Holwayamucida2018-e1568725786140.jpg"
+              alt="button mushroom"
+            />
+          </div>
+          <div class="image-box">
+            <img
+              class="stretch"
+              src="https://upload.wikimedia.org/wikipedia/commons/9/92/Lion%27s-mane_mushroom_imported_from_iNaturalist_photo_176790519_on_21_March_2024.jpg"
+              alt="destroying angel"
+            />
+          </div>
+          <div class="text-box">
+            <p>
+              The actual height and size can be very different across different
+              species, from very small to large.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="text-box">
-        <p>One is a harmless button mushroom, the other is the deadly destroying angel.</p>
-    </div>
-</body>
+  </body>
 </html>
