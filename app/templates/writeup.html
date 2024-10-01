@@ -47,5 +47,23 @@
                 <div class="card-header text-center">
                     <h1>Written Report</h1>
                 </div>
-
+                <div class="iframe-wrapper">
+                    <div class="iframe-container">
+                        <iframe id="google-doc-iframe" src="https://docs.google.com/document/d/e/2PACX-1vQ7ZWVwoU7dU2Z7mCsFUxMYrQDpe0xlFCuMMXVkaAkcE8CE3OEtY3j0TTK-zVUR73qOtG0mCGzK7tJm/pub?embedded=true"></iframe>
+                    </div>
+                </div>
                 <div class="card-body text-center">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // JavaScript to dynamically adjust iframe height based on its content
+        window.addEventListener('load', () => {
+            const iframe = document.getElementById('google-doc-iframe');
+            iframe.onload = () => {
+                iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+            };
+        });
+    </script>
+</body>
