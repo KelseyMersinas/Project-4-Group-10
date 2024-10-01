@@ -169,3 +169,38 @@ input[type="range"] {
     background-color: #f9f9f9; /* Background color */
     text-align: center; /* Center text */
 }
+
+
+/* Make the iframe responsive */
+.responsive-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Center the iframe container */
+.iframe-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px; /* Add some padding to avoid touching the edges */
+}
+
+/* Set a maximum width to keep the document at a readable size */
+.iframe-container {
+    max-width: 800px; /* Adjust the max width as needed */
+    width: 100%;
+    aspect-ratio: 8.5 / 11; /* Aspect ratio of a typical document */
+    position: relative;
+}
+
+/* Adjust iframe to fit inside the container */
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
