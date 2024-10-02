@@ -1,5 +1,5 @@
 # Project 4- Group 10
- ##### Andrew Garza, Sarah Ruth, Kelsey Mersinas, Laura Zapata
+ ##### [Andrew Garza](https://github.com/Tiiide), [Sarah Ruth](https://github.com/smruth17), [Kelsey Mersinas](https://github.com/KelseyMersinas), Laura Zapata
  
  ## Project Overview
  For Project 4, we selected a dataset on wild mushroom classification aimed at identifying
@@ -24,9 +24,9 @@ Will put our Python Anywhere link here
 
 ## Tableau Public Dashboards
 
- Check out our Tableau Public Dashboards: [Mushroom Data Dashboard] (https://public.tableau.com/app/profile/kelsey.mersinas/viz/Mushroom_data/Dashboard1?publish=yes)
+ Check out our Tableau Public Dashboards: [Mushroom Data Dashboard](https://public.tableau.com/app/profile/kelsey.mersinas/viz/Mushroom_data/Dashboard1?publish=yes)
     
-[Mushroom Edibility] (https://public.tableau.com/app/profile/andrew.garza/viz/MushroomEdibility_17273967049370/MushroomEdibilityDashboard?publish=yes)
+[Mushroom Edibility](https://public.tableau.com/app/profile/andrew.garza/viz/MushroomEdibility_17273967049370/MushroomEdibilityDashboard?publish=yes)
 
-[Mushroom Edibility Visualization] (https://public.tableau.com/app/profile/laura.zapata8268/viz/MushroomEdibilityVisualization/Dashboard1)
+[Mushroom Edibility Visualization](https://public.tableau.com/app/profile/laura.zapata8268/viz/MushroomEdibilityVisualization/Dashboard1)
 
