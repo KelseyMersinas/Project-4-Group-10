@@ -18,7 +18,11 @@ body {
     height: 100px;
 }
 
-
+.navbar-nav {
+    background-color: rgba(255, 255, 255, 0.5); /* White background with 50% opacity */
+    border-radius: 5px; /* Adds rounded corners to the background */
+    padding: 5px; /* Adds some padding around the text */
+}
 
 .navbar-brand, .nav-link {
     color: #000000; /* Black text color */
@@ -29,7 +33,7 @@ body {
 
 
 .nav-link:hover {
-    /* color: #ffc107; Highlight color on hover */
+    /* Highlight color on hover */
     color: #f7ee00;
 }
 
