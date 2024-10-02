@@ -74,13 +74,14 @@
       </div>
     </nav>
 
-    <header>
+    <header class="intro-section">
       <div class="container">
-          <h1 style="padding: 10px;">Welcome to the Mushroom Classification App</h1>
-          <p style="padding: 10px;">Use our model to predict the edibility of mushrooms!</p>
+          <h1 class="main-header">Explore Mushroom Features!</h1>
+          <p class="subtext">Classify mushrooms effortlessly using our intelligent prediction model. Is it edible, or should you stay away?</p>
       </div>
   </header>
     <main class="container">
+      <div class="form-container">
       <form id="prediction-form">
         <div class="form-group">
           <label for="color">Select Mushroom Color:</label>
@@ -188,7 +189,32 @@
           Predict Edibility
         </button>
       </form>
-      <div id="result" style="margin-top: 20px"></div>
+      <div class="side-info">
+        <h3>Prediction Result</h3>
+        <div id="result" class="result-box" style="margin-top: 30px">
+                    <p>No prediction yet. Please use the form to make a prediction.</p>
+        </div>
+        <br>
+        <br>
+        <div class="definitions">
+          <h3>Definitions</h3>
+          <p><strong>Gill Attachment:</strong> The way the gills are attached to the mushroom stem, e.g., free, attached, descending.</p>
+          <p><i>Adnate</i> - broadly attached the stem</p>
+          <p><i>Adnexed</i> - narrowly attached the stem</p>
+          <p><i>Decurrent</i> - attached and extend down the stem</p>
+          <p><i>Free</i> - not attached to stem</p>
+          <p><i>Sinuate</i> - smoothly notched before slightly running down stem</p>
+          <p><i>Pores</i> - not gills, but pores instead</p>
+          <p><strong>Cap Shape:</strong> The shape of the mushroom cap, e.g., bell, conical, convex, flat.</p>
+          <p><i>Bell</i> - bell-shaped; also known as campanulate</p>
+          <p><i>Conical</i> - cone-shaped</p>
+          <p><i>Convex</i> - bowl-shaped</p>
+          <p><i>Flat</i> - flat cap; no noticeable curve</p>
+          <p><i>Sunken</i> - inverted cone</p>
+          <p><i>Spherical</i> - egg-shaped; aka ovoid or hemispherical</p>
+        </div>
+      </div>
+    </div>
     </main>
     <script src="{{ url_for('static', filename='js/logic.js') }}"></script>
   </body>

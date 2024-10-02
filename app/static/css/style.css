@@ -120,9 +120,42 @@ header h1, header p {
     margin: 10px 0; /* Reduced margin for header */
 }
 
+/*
 .container {
-    max-width: 500px; /* Limit width of form */
-    margin: auto; /* Center the form */
+    max-width: 500px; 
+    margin: auto;
+}
+*/
+
+/* Intro section styling */
+.intro-section {
+    background: linear-gradient(135deg, #6a8e23ad, #228b22b0);
+    background-size: cover;
+    background-position: center;
+    padding: 10px 10px;
+    color: #ffffff; /* White text color */
+    text-align: center;
+    border-radius: 10px; /* Rounded corners for the header section */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+    margin-bottom: 20px;
+}
+
+
+/* Main header text */
+.main-header {
+    font-family: 'Candara'; /* Example of a more engaging font */
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Text shadow for depth */
+    margin-bottom: 0px;
+}
+
+/* Subtext */
+.subtext {
+    font-family: 'Candara';
+    font-size: 16px;
+    font-style: italic;
+    margin: 0;
 }
 
 .form-group {
@@ -133,12 +166,57 @@ header h1, header p {
     margin-bottom: 5px; /* Space between label and input */
 }
 
+.form-container {
+    display: flex; /* Use flexbox to align items side-by-side */
+    justify-content: space-between; /* Space between form and definitions */
+}
+
+/* Form styling */
+#prediction-form {
+    flex: 2; /* Take more space */
+}
+
+/* Definitions styling */
+.definitions {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+/* Form styling */
+#prediction-form {
+    flex: 2; /* Take more space */
+}
+
+/* Side information (result + definitions) */
+.side-info {
+    flex: 1; /* Take less space */
+    margin-left: 20px;
+}
+
+/* Result box styling */
+.result-box {
+    font-size: 18px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin-bottom: 10px; /* Space between result and definitions */
+    min-height: 100px; /* Set a minimum height for the result box */
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
 input[type="range"] {
     width: 33%; /* Make range inputs full width */
 }
 
 #result {
     margin-top: 15px; /* Space between result and form */
+    font-size: 18px;
 }
 
 /* Landing page body styling */
@@ -148,6 +226,7 @@ input[type="range"] {
     justify-content: space-between;
     margin-bottom: 20px; /* Space below the images */
 }
+
 
 
 .text-box {
