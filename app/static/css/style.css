@@ -104,6 +104,13 @@ body {
     color: #333; /* Dark text color for the header */
 }
 
+/* tableau 1 styling */
+.padding {
+    padding: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Predictions page styling */
 body {
     font-family: Arial, sans-serif;
@@ -138,21 +145,25 @@ input[type="range"] {
 .container {
     display: flex; /* Use flexbox for side-by-side layout */
     align-items: center; /* Align items vertically */
+    justify-content: space-between;
     margin-bottom: 20px; /* Space below the images */
 }
+
 
 .text-box {
     border: 1px solid #ccc; /* Border around the text box */
     border-radius: 5px; /* Rounded corners */
     padding: 10px; /* Space inside the box */
     background-color: #f9f9f9; /* Background color */
-    text-align: left; /* Align text to the left */
-    margin-left: 10px; /* Space between images and text */
+    text-align: center; /* Align text to the left */
+    margin-left: 10px;
+    margin-bottom: 20px; /* Space between images and text */
 }
 
 .image-box {
     height: 300px; /* Set a fixed height for each image box */
-    width: auto;
+    max-width: 300px; /* Maximum width for each image box */
+    width: 100%; /* Allow to expand to 100% of the parent width */
     margin: 0 10px; /* Space between images */
     overflow: hidden; /* Hide any overflow */
     border-radius: 5px; /* Rounded corners for the images */
@@ -169,7 +180,7 @@ input[type="range"] {
 
 .image-box img.stretch {
     width: 200%; /* Increase width for this specific image */
-    height: auto; /* Maintain aspect ratio */
+    height: 100%; /* Maintain aspect ratio */
     object-fit: cover; /* Ensure the image covers the box without stretching */
 }
 
