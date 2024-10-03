@@ -147,7 +147,7 @@
           </select>
         </div>
         <div class="form-group">
-          <label for="cap_diameter">Cap Diameter (mm):</label>
+          <label for="cap_diameter">Cap Diameter (cm):</label>
           <input
             type="range"
             id="cap_diameter"
@@ -157,7 +157,7 @@
             step="1"
             value="100"
           />
-          <span id="cap_diameter_value">10</span> mm
+          <span id="cap_diameter_value">10</span> cm
         </div>
         <div class="form-group">
           <label for="stem_height">Stem Height (cm):</label>
@@ -167,10 +167,10 @@
             name="stem_height"
             min="{{ valid_features['stem_height']['min'] }}"
             max="{{ valid_features['stem_height']['max'] }}"
-            step="0.000001"
-            value="1.5"
+            step="0.01"
+            value="10"
           />
-          <span id="stem_height_value">1.5</span> cm
+          <span id="stem_height_value">10</span> cm
         </div>
         <div class="form-group">
           <label for="stem_width">Stem Width (mm):</label>
