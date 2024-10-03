@@ -13,8 +13,11 @@ $(document).ready(function () {
 $("#cap_diameter").on("input", function handleCapSliderChange(event) {
   const { target } = event; // event = { target: foo }
   const { value } = target; // target = { value: bar }
+// Divide value by 30
+  const adjustedValue = value / 30;
   const $labelSpan = $("#cap_diameter_value");
-  $labelSpan.text(value);
+// Update the label
+  $labelSpan.text(adjustedValue.toFixed(2));
 });
 
 $("#stem_height").on("input", function handleStemHeightChange(event) {
