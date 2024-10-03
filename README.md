@@ -2,13 +2,15 @@
  ##### [Andrew Garza](https://github.com/Tiiide), [Sarah Ruth](https://github.com/smruth17), [Kelsey Mersinas](https://github.com/KelseyMersinas), Laura Zapata
  
  ## Project Overview
- For Project 4, we selected a dataset on wild mushroom classification aimed at identifying
- edibility. This dataset, sourced from the UC Irvine Machine Learning Repository, contains over
- 50,000 entries representing various mushroom species. Given that there are over 14,000
- species of mushrooms worldwide, ranging from perfectly edible to deadly, accurate mushroom
+ We selected a dataset on wild mushroom classification aimed at identifying
+ edibility. Given that there are over 14,000 species of mushrooms worldwide, ranging from perfectly edible to deadly, accurate mushroom
  identification is critical for foraging and safe consumption. Machine learning serves as an
  effective tool for quickly classifying mushrooms based on their characteristics, providing
- valuable information to individuals in the field.
+ valuable information to individuals in the field. This app will be able to take given descriptors
+ from users and will output a suggestion on if this is an species of edible mushroom or if this is a 
+ poisonous species to avoid. 
+ Included is are two intractable dashboards that aim to explore our data and showcase the 
+ differences in wild mushroom characteristics. 
 
 ## Research Questions
 
@@ -20,7 +22,7 @@ We aim to explore several research questions related to mushroom edibility, incl
 
 ## Web Application
 
-Will put our Python Anywhere link here 
+[Mushroom Classification App](https://kelseymersinas.pythonanywhere.com/)
 
 ## Tableau Public Dashboards
 
