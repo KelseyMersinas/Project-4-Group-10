@@ -11,8 +11,8 @@ $(document).ready(function () {
 
 // change slider values to see selection
 $("#cap_diameter").on("input", function handleCapSliderChange(event) {
-  const { target } = event; // event = { target: foo }
-  const { value } = target; // target = { value: bar }
+  const { target } = event; 
+  const { value } = target; 
 // Divide value by 30
   const adjustedValue = value / 30;
   const $labelSpan = $("#cap_diameter_value");
