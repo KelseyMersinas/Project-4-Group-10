@@ -1,5 +1,5 @@
 # Project 4- Group 10
- ##### [Andrew Garza](https://github.com/Tiiide), [Sarah Ruth](https://github.com/smruth17), [Kelsey Mersinas](https://github.com/KelseyMersinas), Laura Zapata
+ ##### [Andrew Garza](https://github.com/Tiiide), [Sarah Ruth](https://github.com/smruth17), [Kelsey Mersinas](https://github.com/KelseyMersinas), [Laura Zapata](https://github.com/Lauz11)
  
  ## Project Overview
  We selected a dataset on wild mushroom classification aimed at identifying
