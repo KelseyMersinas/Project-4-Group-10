@@ -26,9 +26,9 @@ We aim to explore several research questions related to mushroom edibility, incl
 
 ## Tableau Public Dashboards
 
- Check out our Tableau Public Dashboards: [Mushroom Data Dashboard](https://public.tableau.com/app/profile/kelsey.mersinas/viz/Mushroom_data/Dashboard1?publish=yes)
+ Check out our Tableau Public Dashboards: [Mushroom Data Shape and Color](https://public.tableau.com/app/profile/kelsey.mersinas/viz/Mushroom_data/Dashboard1?publish=yes)
     
-[Mushroom Edibility](https://public.tableau.com/app/profile/andrew.garza/viz/MushroomEdibility_17273967049370/MushroomEdibilityDashboard?publish=yes)
+[Mushroom Edibility Deep Dive](https://public.tableau.com/app/profile/andrew.garza/viz/MushroomEdibility_17273967049370/MushroomEdibilityDashboard?publish=yes)
 
-[Mushroom Edibility Visualization](https://public.tableau.com/app/profile/laura.zapata8268/viz/MushroomEdibilityVisualization/Dashboard1)
+[Exploring Mushroom Visualization](https://public.tableau.com/app/profile/laura.zapata8268/viz/MushroomEdibilityVisualization/Dashboard1)
 
