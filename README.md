@@ -7,9 +7,9 @@
  identification is critical for foraging and safe consumption. Machine learning serves as an
  effective tool for quickly classifying mushrooms based on their characteristics, providing
  valuable information to individuals in the field. This app will be able to take given descriptors
- from users and will output a suggestion on if this is an species of edible mushroom or if this is a 
+ from users and will output a suggestion on if this could be a species of edible mushroom or if this is a 
  poisonous species to avoid. 
- Included is are two intractable dashboards that aim to explore our data and showcase the 
+ Included are two intractable dashboards that aim to explore our data and showcase the 
  differences in wild mushroom characteristics. 
 
 ## Research Questions
