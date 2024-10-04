@@ -10,23 +10,27 @@ $(document).ready(function () {
 });
 
 // change slider values to see selection
-$("#cap_diameter").change(function handleCapSliderChange(event) {
-  const { target } = event; // event = { target: foo }
-  const { value } = target; // target = { value: bar }
-  const $labelSpan = $("#cap_diameter_value");
-  $labelSpan.text(value);
-});
-
-$("#stem_height").change(function handleStemHeightChange(event) {
+$("#cap_diameter").on("input", function handleCapSliderChange(event) {
   const { target } = event; 
   const { value } = target; 
+// Divide value by 30
+  const adjustedValue = value / 30;
+  const $labelSpan = $("#cap_diameter_value");
+// Update the label
+  $labelSpan.text(adjustedValue.toFixed(2));
+});
+
+
+$("#stem_height").on("input", function handleStemHeightChange(event) {
+  const { target } = event;
+  const { value } = target;
   const $labelSpan = $("#stem_height_value");
   $labelSpan.text(value);
 });
 
-$("#stem_width").change(function handleStemWidthChange(event) {
-  const { target } = event; 
-  const { value } = target; 
+$("#stem_width").on("input", function handleStemWidthChange(event) {
+  const { target } = event;
+  const { value } = target;
   const $labelSpan = $("#stem_width_value");
   $labelSpan.text(value);
 });
@@ -52,13 +56,13 @@ function makePredictions() {
     gill_color,
     season,
     stem_color,
-    cap_diameter,
-    stem_height,
+    cap_diameter: cap_diameter / 30, 
+    stem_height: stem_height / 100, // change the slider value from cm back to m for model consistancy
     stem_width,
   };
 
   console.log(payload);
-  
+
   // fetch request
   fetch("/makePredictions", {
     body: JSON.stringify({ data: payload }),

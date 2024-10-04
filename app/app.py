@@ -15,8 +15,8 @@ valid_features = {
     'stem_color': ['Brown', 'Buff', 'Gray', 'Green', 'Pink', 'Purple', 'Red', 'White', 'Yellow', 'Blue', 'Orange', 'Black'],
     'season': ['Spring', 'Summer', 'Fall', 'Winter'],
     'cap_diameter': {'min': 0, 'max': 1891}, 
-    'stem_height': {'min': 0.000426, 'max': 3.83532},
-    'stem_width': {'min': 0, 'max': 3569}
+    'stem_height': {'min': 0.04, 'max': 100},
+    'stem_width': {'min': 0, 'max': 100}
 }
 
 #########################################################
